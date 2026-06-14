@@ -16,7 +16,8 @@ export async function GET(request: Request) {
       name: "Mantle Sepolia",
       chainId: 5003,
       nativeToken: "MNT",
-      explorer: "https://sepolia.mantlescan.xyz"
+      explorer: "https://sepolia.mantlescan.xyz",
+      contractAddress: "0x7D0893625B9f8F0d5B84531393B84dE5624bAa78"
     },
     byrealFit: {
       track: "Agentic Economy",

@@ -4,13 +4,21 @@ Use this script for screenshots, judging review, or a live walkthrough.
 
 ## Glass-Box On-Chain Demo
 
-After final approval and deployment to Mantle Sepolia, run:
+The deployed Mantle Sepolia demo is invoice `3`:
+
+```text
+0x7D0893625B9f8F0d5B84531393B84dE5624bAa78
+```
+
+Proof links are in [ONCHAIN.md](ONCHAIN.md).
+
+For a deliberate fresh demo run, use:
 
 ```bash
 pnpm contracts:live-demo:mantle-sepolia
 ```
 
-The script creates one invoice and runs a deterministic agentic settlement loop:
+The flow creates one invoice and runs a deterministic agentic settlement loop:
 
 1. create invoice
 2. attach signed payment mandate

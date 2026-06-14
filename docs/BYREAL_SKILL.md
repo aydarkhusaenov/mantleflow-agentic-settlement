@@ -12,6 +12,7 @@ The track-specific scorecard rewards deep Byreal integration, agent autonomy, re
 - Runtime endpoint: `/api/byreal/skill`
 - Local skill folder: `skills/mantleflow-settlement/`
 - CLI shim: `skills/mantleflow-settlement/bin/mantleflow-skill.mjs`
+- Mantle Sepolia contract: `0x7D0893625B9f8F0d5B84531393B84dE5624bAa78`
 
 ## Tools
 

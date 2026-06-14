@@ -42,11 +42,40 @@ https://github.com/aydarkhusaenov/mantleflow-agentic-settlement
 
 ## Mantle Contract
 
-To be filled after final checks and deployment.
+`InvoiceEscrow`
+
+```text
+0x7D0893625B9f8F0d5B84531393B84dE5624bAa78
+```
+
+Mantlescan:
+
+```text
+https://sepolia.mantlescan.xyz/address/0x7D0893625B9f8F0d5B84531393B84dE5624bAa78
+```
+
+Deployment tx:
+
+```text
+https://sepolia.mantlescan.xyz/tx/0xd75d098c90424181fb022e6cab0acd2c39307d0c9a2d76c14c25fbd9b42982ae
+```
+
+Live demo invoice `3`:
+
+```text
+https://sepolia.mantlescan.xyz/tx/0x5d3e3e2b22de3d14005d83d965195a5ef6e9d11138dc44b33d5480d20da3f589
+https://sepolia.mantlescan.xyz/tx/0x60c7374d0d9274ddaceba87cd7f09703565749e5b151ffb09492155b5e349440
+https://sepolia.mantlescan.xyz/tx/0x4b640b6eecec0b3cef9f1d1f9624ec6297b538afdd74131b92c889c2d7b654bb
+https://sepolia.mantlescan.xyz/tx/0x4365663eae5ade3fba7ac27e082b4bb37231754a47a75943a5e63a217f3f2ea5
+https://sepolia.mantlescan.xyz/tx/0x4273b70309545f7f2b1fb87b4161544580df3274c10e828445b3733635e81e62
+https://sepolia.mantlescan.xyz/tx/0x14696584ec0cc404df06970e22ad253935da3409effd48f1f04c96224c58d4af
+https://sepolia.mantlescan.xyz/tx/0xfcb26e3926715dfcc963150eb84c2b2d3ed5242c8f7d43ce05f1ccbf789040f2
+https://sepolia.mantlescan.xyz/tx/0xda801d662dd76dc937ccfc44171c38ae98545fe26a30ea8dc1a5a619591ee39c
+```
 
 ## Demo Video
 
-Generate the MantleFlow video after Mantle deployment links and live demo transactions are final.
+Record the demo from the deployed Mantle Sepolia state and live `/activity` view. Use [docs/demo-script.md](demo-script.md) and [docs/ONCHAIN.md](ONCHAIN.md).
 
 ## X Thread Checklist
 
@@ -63,10 +92,10 @@ Draft thread:
 
 1. MantleFlow is agentic settlement infrastructure for Mantle: invoices, MNT escrow, AP2-style mandates, evidence, service bonds, disputes, settlement receipts, and agent reputation.
 2. It targets the Agentic Economy track: a Byreal Agent Skills compatible adapter lets agents read settlement context, choose a safe next action, build unsigned calldata, and prove receipt outcomes without custodying keys.
-3. On-chain proof: deployed `InvoiceEscrow` on Mantle Sepolia, seeded demo invoices, live `/activity` analytics, service-bond proof, skill-planned transaction, and receipt-bound validation proof.
+3. On-chain proof: deployed `InvoiceEscrow` on Mantle Sepolia, seeded demo invoices, live `/activity` analytics, service-bond proof, skill-planned transaction, feedback root, and receipt-bound validation proof.
 4. GitHub: https://github.com/aydarkhusaenov/mantleflow-agentic-settlement
-5. Contract: fill with the Mantle Sepolia `InvoiceEscrow` address after final deployment.
-6. Demo video: fill with the MantleFlow walkthrough video after deployment links are final.
+5. Contract: `0x7D0893625B9f8F0d5B84531393B84dE5624bAa78` on Mantle Sepolia: https://sepolia.mantlescan.xyz/address/0x7D0893625B9f8F0d5B84531393B84dE5624bAa78
+6. Demo video: attach the MantleFlow walkthrough video recorded from the deployed state.
 
 ## Final Honesty Rules
 

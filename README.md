@@ -56,7 +56,7 @@ Create `.env` from `.env.example` and set the funded testnet key:
 MANTLE_SEPOLIA_RPC_URL=https://rpc.sepolia.mantle.xyz
 PRIVATE_KEY=0xTESTNET_ONLY_PRIVATE_KEY
 NEXT_PUBLIC_CHAIN_ID=5003
-NEXT_PUBLIC_ESCROW_ADDRESS=
+NEXT_PUBLIC_ESCROW_ADDRESS=0x7D0893625B9f8F0d5B84531393B84dE5624bAa78
 ```
 
 The funded deployment wallet is:
@@ -71,23 +71,29 @@ Explorer:
 https://sepolia.mantlescan.xyz/address/0x28C06E3fe7ED2D15fb8901Df9D48c895E18Ed590
 ```
 
-## Deploy Only After Final Checks
+## Mantle Sepolia Deployment
 
-Deployment is intentionally the last step.
-
-```bash
-pnpm contracts:deploy:mantle-sepolia
-pnpm contracts:seed:mantle-sepolia
-pnpm contracts:live-demo:mantle-sepolia
-```
-
-After deployment, set:
+Deployed `InvoiceEscrow`:
 
 ```text
-NEXT_PUBLIC_ESCROW_ADDRESS=0xDEPLOYED_MANTLE_CONTRACT
+0x7D0893625B9f8F0d5B84531393B84dE5624bAa78
 ```
 
-Then run:
+Explorer:
+
+```text
+https://sepolia.mantlescan.xyz/address/0x7D0893625B9f8F0d5B84531393B84dE5624bAa78
+```
+
+Deployment transaction:
+
+```text
+https://sepolia.mantlescan.xyz/tx/0xd75d098c90424181fb022e6cab0acd2c39307d0c9a2d76c14c25fbd9b42982ae
+```
+
+Live demo invoice `3` proves creation, AP2 mandate attachment, service bond, MNT payment, delivery evidence, release, feedback, and validator attestation. Full proof links are in [docs/ONCHAIN.md](docs/ONCHAIN.md).
+
+## Run Frontend
 
 ```bash
 pnpm dev

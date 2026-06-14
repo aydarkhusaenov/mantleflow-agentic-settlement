@@ -1,6 +1,6 @@
 # Mantle Turing Test Scorecard Fit
 
-This file maps MantleFlow to the DoraHacks/Mantle scorecard before final deployment.
+This file maps MantleFlow to the DoraHacks/Mantle scorecard with the deployed Mantle Sepolia proof.
 
 ## General Scorecard
 
@@ -36,13 +36,12 @@ MantleFlow now targets those directly:
 | Use-case clarity | Real agent-service settlement: an agent hires another agent or human provider, locks MNT escrow, tracks SLA evidence, and settles or disputes with receipts. |
 | Verifiability | Every important output is backed by Mantle txs, payment requirement hash, receipt hash, evidence roots, feedback roots, and validator attestation roots. |
 
-## What Still Must Be Done After Approval
+## Deployed Proof
 
-- Deploy to Mantle Sepolia.
-- Seed demo invoices.
-- Run live demo transactions.
-- Fill `docs/ONCHAIN.md` with Mantlescan links.
-- Generate the Mantle-specific demo video from real deployed state.
+- `InvoiceEscrow`: `0x7D0893625B9f8F0d5B84531393B84dE5624bAa78`
+- Mantlescan: https://sepolia.mantlescan.xyz/address/0x7D0893625B9f8F0d5B84531393B84dE5624bAa78
+- On-chain proof: [ONCHAIN.md](ONCHAIN.md)
+- Remaining submission asset: Mantle-specific demo video recorded from the deployed state.
 
 ## Sources Used
 
