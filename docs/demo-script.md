@@ -23,6 +23,20 @@ The script creates one invoice and runs a deterministic agentic settlement loop:
 
 It prints every transaction hash and Mantlescan URL for inclusion in [ONCHAIN.md](ONCHAIN.md).
 
+## Byreal Skill Demo
+
+With the app running against the deployed contract, show the Agentic Economy adapter:
+
+```bash
+export MANTLEFLOW_ENDPOINT="http://localhost:3000"
+pnpm byreal:skill:catalog
+node skills/mantleflow-settlement/bin/mantleflow-skill.mjs settlement_context 1 0x28C06E3fe7ED2D15fb8901Df9D48c895E18Ed590
+node skills/mantleflow-settlement/bin/mantleflow-skill.mjs autonomous_next_action 1 0x28C06E3fe7ED2D15fb8901Df9D48c895E18Ed590
+node skills/mantleflow-settlement/bin/mantleflow-skill.mjs receipt_proof 1
+```
+
+Narrate the result as: the skill perceives live Mantle state, chooses a safe next action, returns unsigned calldata, and proves the outcome through receipt and evidence hashes. It does not custody keys or broadcast transactions.
+
 ## Flow 1: Clean Settlement
 
 1. Create an MNT invoice with a recipient, metadata hash, due date, and timeout.

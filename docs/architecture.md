@@ -371,6 +371,23 @@ It then produces:
 
 The agent does not sign transactions, custody funds, or decide authorization. All authorization stays in the smart contract and every state-changing action requires wallet confirmation.
 
+## Byreal Agent Skill Adapter
+
+MantleFlow exposes the deterministic settlement agent as a Byreal Agent Skills compatible adapter:
+
+- `/.well-known/byreal-skill.json` publishes the skill manifest
+- `/api/byreal/skill` exposes JSON tools for agents and agent-wallet runners
+- `skills/mantleflow-settlement/` contains a local skill descriptor and CLI shim
+
+The adapter supports:
+
+- `settlement_context`: reads live invoice state and policy assessment
+- `autonomous_next_action`: chooses the highest-priority safe action from the wallet role and current invoice state
+- `build_unsigned_call`: returns one bounded transaction target, value, and calldata
+- `receipt_proof`: returns receipt hash, payment requirement hash, AP2-style mandate hashes, and evidence roots
+
+This is deliberately non-custodial. A Byreal-compatible agent can perceive context, decide, and prepare execution, but final signing remains with a wallet or agent-account signer. That keeps the agent autonomous without bypassing user authorization.
+
 ## Settlement Design
 
 MantleFlow deliberately avoids an admin arbitrator. If delivery is disputed, payer or recipient can propose a split settlement. The proposal stores the recipient payout, payer refund, proposer, timestamp, and memo hash. Only the counterparty can accept the proposal. This gives the product a practical dispute-resolution path while preserving user custody and contract-enforced consent.

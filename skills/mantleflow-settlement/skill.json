@@ -1,0 +1,23 @@
+{
+  "name": "mantleflow.settlement",
+  "version": "0.1.0",
+  "title": "MantleFlow Settlement Skill",
+  "description": "Byreal Agent Skills compatible adapter for Mantle-native invoice escrow, autonomous settlement planning, unsigned transaction generation, and receipt proof.",
+  "network": {
+    "name": "Mantle Sepolia",
+    "chainId": 5003
+  },
+  "entrypoint": "bin/mantleflow-skill.mjs",
+  "tools": [
+    "catalog",
+    "settlement_context",
+    "autonomous_next_action",
+    "build_unsigned_call",
+    "receipt_proof"
+  ],
+  "safety": {
+    "acceptsPrivateKeys": false,
+    "broadcastsTransactions": false,
+    "requiresExternalSigner": true
+  }
+}

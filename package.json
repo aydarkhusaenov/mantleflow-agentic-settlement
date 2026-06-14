@@ -15,6 +15,8 @@
     "contracts:live-demo:mantle-sepolia": "pnpm --filter @mantleflow/contracts live-demo:mantle-sepolia",
     "contracts:coverage": "pnpm --filter @mantleflow/contracts coverage",
     "contracts:test": "pnpm --filter @mantleflow/contracts test",
+    "byreal:skill:catalog": "node skills/mantleflow-settlement/bin/mantleflow-skill.mjs catalog",
+    "byreal:skill:plan": "node skills/mantleflow-settlement/bin/mantleflow-skill.mjs autonomous_next_action",
     "test": "pnpm --filter @mantleflow/contracts test && pnpm --filter @mantleflow/app build"
   },
   "keywords": [

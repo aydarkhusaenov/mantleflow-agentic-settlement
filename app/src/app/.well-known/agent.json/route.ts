@@ -7,7 +7,7 @@ export async function GET(request: Request) {
   return NextResponse.json({
     name: "MantleFlow Agentic Escrow",
     description:
-      "Non-custodial Arbitrum escrow for agent-created invoices, x402/EIP-3009 funding, scoped settlement actions, evidence roots, service bonds, and portable receipts.",
+      "Non-custodial Mantle escrow for agent-created invoices, x402-style payment requirements, scoped settlement actions, evidence roots, service bonds, validator attestations, and portable receipts.",
     version: "0.1.0",
     provider: {
       name: "MantleFlow",
@@ -15,12 +15,8 @@ export async function GET(request: Request) {
     },
     networks: [
       {
-        name: "Arbitrum Sepolia",
-        chainId: 421614
-      },
-      {
-        name: "Robinhood Chain Testnet",
-        chainId: 46630
+        name: "Mantle Sepolia",
+        chainId: 5003
       },
       {
         name: "Hardhat",
@@ -37,9 +33,13 @@ export async function GET(request: Request) {
       "ap2_mandate_hashes",
       "erc8004_reputation_summary",
       "tee_validation_attestation_hash",
-      "tokenized_stock_invoice_demo"
+      "byreal_agent_skill_adapter",
+      "autonomous_settlement_plan"
     ],
     endpoints: {
+      byrealSkillManifest: `${origin}/.well-known/byreal-skill.json`,
+      byrealSkillApi: `${origin}/api/byreal/skill`,
+      mcp: `${origin}/api/mcp`,
       x402PaymentRequirement: `${origin}/api/x402/{invoiceId}`,
       x402Verify: `${origin}/api/x402/verify`,
       explain: `${origin}/api/agent/explain?invoiceId={invoiceId}&account={address}`,

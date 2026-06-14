@@ -2,7 +2,7 @@
 
 Agentic invoice escrow, delivery evidence, reputation, and settlement intelligence for Mantle Sepolia.
 
-MantleFlow is a Mantle-native adaptation of the MantleFlow settlement core for The Turing Test Hackathon 2026. It turns agent-triggered payments into enforceable commercial workflows: invoice creation, MNT escrow funding, AP2-style mandate hashes, service bonds, delivery evidence, dispute evidence, timeout paths, counterparty-approved split settlement, receipt-bound feedback, validator attestations, and live settlement analytics.
+MantleFlow is a Mantle-native settlement system for The Turing Test Hackathon 2026. It turns agent-triggered payments into enforceable commercial workflows: invoice creation, MNT escrow funding, AP2-style mandate hashes, service bonds, delivery evidence, dispute evidence, timeout paths, counterparty-approved split settlement, receipt-bound feedback, validator attestations, and live settlement analytics.
 
 ## Hackathon Fit
 
@@ -20,14 +20,26 @@ Official Mantle guidance for this phase asks builders to submit an X thread cont
 
 - Mantle Sepolia deployment target with MNT-native invoice and service-bond flows.
 - Agentic settlement, not just payment: escrow, evidence, refund windows, compromise settlement, and receipt generation.
+- Byreal Agent Skills compatible adapter for settlement context, autonomous next-action planning, unsigned transaction generation, and receipt proof.
 - x402-style payment requirements plus EIP-3009 funding path for compatible ERC20s.
 - AP2-style intent, cart, payment, and prompt-playback mandate hashes.
 - EIP-712 signed payer mandates and scoped action permits with nonce cancellation.
 - ERC-1271 contract-wallet signature support.
 - ERC-8004-style feedback, validation, and reputation events/summaries.
 - Receipt-bound validator attestations with TEE attestation hash support.
-- Live `/activity` analytics for lifecycle mix, MNT/ETH value flow, dispute rate, evidence counts, and agent reputation leaderboard.
-- Security-hardening already proven by 74 contract tests, 100% production contract coverage, production dependency audit, and Slither medium/high scan.
+- Live `/activity` analytics for lifecycle mix, native-value flow, dispute rate, evidence counts, and agent reputation leaderboard.
+- Security-hardening already proven by 74 contract tests, 100% production contract coverage, production dependency audit, and Slither scan with 0 deployable-code findings.
+
+## Byreal Agent Skill
+
+MantleFlow exposes an Agentic Economy track adapter:
+
+- manifest: `/.well-known/byreal-skill.json`
+- endpoint: `/api/byreal/skill`
+- local skill: `skills/mantleflow-settlement/`
+- docs: [docs/BYREAL_SKILL.md](docs/BYREAL_SKILL.md)
+
+The skill is intentionally non-custodial. It perceives live invoice context, selects a safe next action, and returns unsigned calldata. Final signing stays with the wallet or agent-account layer.
 
 ## Quick Start
 
@@ -92,5 +104,7 @@ http://localhost:3000/activity
 - DoraHacks fields: [docs/DORAHACKS_BUIDL.md](docs/DORAHACKS_BUIDL.md)
 - Deployment guide: [docs/deployment.md](docs/deployment.md)
 - On-chain proof: [docs/ONCHAIN.md](docs/ONCHAIN.md)
+- Byreal skill adapter: [docs/BYREAL_SKILL.md](docs/BYREAL_SKILL.md)
+- Scorecard fit: [docs/SCORECARD_FIT.md](docs/SCORECARD_FIT.md)
 - Security notes: [docs/security.md](docs/security.md)
 - Architecture: [docs/architecture.md](docs/architecture.md)
