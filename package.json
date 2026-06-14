@@ -1,0 +1,39 @@
+{
+  "name": "mantleflow-agentic-settlement",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "description": "Agent-assisted invoice escrow, delivery evidence, reputation, and settlement intelligence deployed on Mantle.",
+  "scripts": {
+    "build": "pnpm --filter @mantleflow/app build",
+    "dev": "pnpm --filter @mantleflow/app dev",
+    "contracts:compile": "pnpm --filter @mantleflow/contracts compile",
+    "contracts:deploy:mantle-sepolia": "pnpm --filter @mantleflow/contracts deploy:mantle-sepolia",
+    "contracts:seed:mantle-sepolia": "pnpm --filter @mantleflow/contracts seed:mantle-sepolia",
+    "contracts:demo": "pnpm --filter @mantleflow/contracts demo",
+    "contracts:demo:node": "pnpm --filter @mantleflow/contracts demo:node",
+    "contracts:live-demo:mantle-sepolia": "pnpm --filter @mantleflow/contracts live-demo:mantle-sepolia",
+    "contracts:coverage": "pnpm --filter @mantleflow/contracts coverage",
+    "contracts:test": "pnpm --filter @mantleflow/contracts test",
+    "test": "pnpm --filter @mantleflow/contracts test && pnpm --filter @mantleflow/app build"
+  },
+  "keywords": [
+    "mantle",
+    "escrow",
+    "agent",
+    "ai",
+    "hackathon"
+  ],
+  "pnpm": {
+    "overrides": {
+      "postcss": "8.5.15",
+      "cookie": "1.1.1",
+      "serialize-javascript": "7.0.5",
+      "tmp": "0.2.6",
+      "undici": "6.24.0",
+      "uuid": "11.1.1",
+      "ws": "8.21.0"
+    }
+  },
+  "license": "MIT"
+}

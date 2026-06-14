@@ -1,0 +1,31 @@
+{
+  "name": "@mantleflow/contracts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "coverage": "hardhat coverage",
+    "deploy:mantle-sepolia": "hardhat run scripts/deploy.js --network mantleSepolia",
+    "seed:mantle-sepolia": "hardhat run scripts/seed.js --network mantleSepolia",
+    "demo": "hardhat run scripts/demo.js",
+    "demo:node": "hardhat run scripts/demo.js --network localhost",
+    "live-demo:mantle-sepolia": "hardhat run scripts/live-demo.js --network mantleSepolia",
+    "test": "hardhat test",
+    "verify:mantle-sepolia": "hardhat verify --network mantleSepolia"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.7",
+    "@nomicfoundation/hardhat-ethers": "^3.0.6",
+    "@nomicfoundation/hardhat-verify": "^2.1.1",
+    "chai": "^4.4.1",
+    "ethers": "^6.12.1",
+    "hardhat": "^2.22.5",
+    "solc": "0.8.24",
+    "solidity-coverage": "^0.8.17"
+  }
+}
